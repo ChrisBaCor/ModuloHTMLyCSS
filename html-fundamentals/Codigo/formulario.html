@@ -1,0 +1,89 @@
+<!-- 
+Tipos de peticiones get y post dentro del manejo de formularios y microservicios:
+ 
+GET: se envia la información por ruta, se envía los datos usando la URL (se expone la información del formulario)
+POST: no envía la información por URL, 
+sino por body, los envía de forma que no podemos verlos (en segundo plano u "ocultos" al usuario)
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fundamentals</title>
+    <style>
+        label {
+            color: rgb(48, 83, 255); 
+            font-weight: bolder; 
+            font-size: large; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            text-align: center; 
+            text-decoration: dotted;
+        }
+        .frmRegistro{
+            background-color: rgb(225, 255, 255);
+            background-image: url(laptop.png);
+            background-size: 40px;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 10;
+        }
+        #idBtnIngresar{
+            background-color: red;
+            border-color: white;
+            margin: 50px;
+            padding: 50px;
+            position: fixed;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <div>
+        <input id="idBtnIngresar" type="button" value="Ingresar">
+        <form class="frmRegistro" method="post">
+            <table border="true" atyle="width: 400px">
+                <thead>
+                    <th colspan="2">Registro de usuarios</th>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="idNombre">Nombre:</label></td>
+                        <td><input type="text" name="nombre" id="idNombre" style="height: 30px;" placeholder="Ingrese aqui su nombre"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="idApellido">Apellido:</label></td>
+                        <td><input type="text" name="apellido" id="idApellido" placeholder="Ingrese aqui su apellido"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="idEmail">Email:</label></td>
+                        <td><input type="email" name="email" id="idEmail" placeholder="Ingrese aqui su email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="idPassword">Contraseña:</label></td>
+                        <td><input type="password" nombre="password" id="idPassword" placeholder=""></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!--<td colspan="2"><input id="idBtnIngresar" value="Ingresar" style="width: 200%;"></td>>-->
+                    </tr>
+                </tbody>
+            </table>
+
+        </form>
+    </div>
+</body>
+</html>
